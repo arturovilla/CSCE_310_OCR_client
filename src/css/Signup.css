@@ -1,0 +1,33 @@
+.Signup__Header {
+	font-family: druk;
+	font-size: 4rem;
+}
+.Signup__SubHeader {
+	margin-top: 4vh;
+	font-family: NMon;
+	font-size: 2rem;
+}
+.Signup__Emailfield {
+	margin-top: 4vh;
+}
+
+.Signup__Passwordfield {
+	margin-top: 2vh;
+}
+.Signup__LoginButton {
+	margin-top: 2vh;
+}
+
+.Signup__LoginButton .MuiButton-root {
+	background-color: #bf32fd !important;
+}
+
+.Signup__SignUp {
+	margin-top: 2vh;
+}
+.Signup__SignUp .MuiButton-root {
+	color: #bf32fd;
+}
+.Signup__Admin .MuiButton-root {
+	color: #bf32fd;
+}

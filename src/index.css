@@ -1,13 +1,29 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+@font-face {
+	font-family: "druk";
+	src: local("druk"), url("./fonts/Druk Wide Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "NMon";
+	src: local("NMon"), url("./fonts/NeueMontreal-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Penn";
+	src: local("Penn"),
+		url("./fonts/PPPangramSansRounded-Variable.ttf") format("truetype");
 }
