@@ -1,0 +1,33 @@
+.Adminsignin__Header {
+	font-family: druk;
+	font-size: 4rem;
+}
+.Adminsignin__SubHeader {
+	margin-top: 4vh;
+	font-family: NMon;
+	font-size: 3rem;
+}
+.Adminsignin__Emailfield {
+	margin-top: 4vh;
+}
+
+.Adminsignin__Passwordfield {
+	margin-top: 2vh;
+}
+.Adminsignin__LoginButton {
+	margin-top: 2vh;
+}
+
+.Adminsignin__LoginButton .MuiButton-root {
+	background-color: #bf32fd !important;
+}
+
+.Adminsignin__SignUp {
+	margin-top: 2vh;
+}
+.Adminsignin__SignUp .MuiButton-root {
+	color: #bf32fd;
+}
+.Adminsignin__Admin .MuiButton-root {
+	color: #bf32fd;
+}

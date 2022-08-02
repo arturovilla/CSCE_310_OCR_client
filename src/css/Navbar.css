@@ -1,0 +1,18 @@
+.Navbar__list {
+	font-family: Penn;
+	font-size: 2rem;
+	text-align: left;
+	/* background-color: aqua; */
+	width: fit-content;
+	margin-left: 1vw;
+}
+
+li a {
+	text-decoration: none !important;
+	color: black;
+}
+
+.Navbar__Nav {
+	width: fit-content;
+	/* background-color: blue; */
+}

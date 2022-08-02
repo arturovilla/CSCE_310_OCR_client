@@ -1,0 +1,29 @@
+.Login__Header {
+	font-family: druk;
+	font-size: 4rem;
+}
+
+.Login__Emailfield {
+	margin-top: 8vh;
+}
+
+.Login__Passwordfield {
+	margin-top: 2vh;
+}
+.Login__LoginButton {
+	margin-top: 2vh;
+}
+
+.Login__LoginButton .MuiButton-root {
+	background-color: #bf32fd !important;
+}
+
+.Login__SignUp {
+	margin-top: 2vh;
+}
+.Login__SignUp .MuiButton-root {
+	color: #bf32fd;
+}
+.Login__Admin .MuiButton-root {
+	color: #bf32fd;
+}
