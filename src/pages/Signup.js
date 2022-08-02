@@ -9,6 +9,10 @@ function Signup() {
 		<div>
 			<div className="Signup__Header">Online Clothing Repository</div>
 			<div className="Signup__SubHeader">Enter Your Information</div>
+			<div className="Signup__Namefield">
+				<TextField id="outlined-basic" label="First Name" variant="outlined" />
+				<TextField id="outlined-basic" label="Last Name" variant="outlined" />
+			</div>
 			<div className="Signup__Emailfield">
 				<TextField id="outlined-basic" label="Email" variant="outlined" />
 			</div>
