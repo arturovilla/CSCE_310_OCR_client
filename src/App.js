@@ -7,7 +7,12 @@ import Product from "./components/Product";
 import Category from "./components/Category";
 import Adminsignin from "./pages/Adminsignin";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+
+import Navbar from "./components/Navbar";
+import Productcards from "./components/Productcards";
+
 //
 function App() {
 	return (
@@ -17,9 +22,60 @@ function App() {
 					<Route path="/" element={<Login />} />
 					<Route path="/signup" element={<Signup />} />
 					<Route path="/admin-sign-in" element={<Adminsignin />} />
-					<Route path="/home" element={<Home />} />
-					<Route path="/product" element={<Product />} />
-					<Route path="/category" element={<Category />} />
+
+					
+
+					<Route
+						path="/home"
+						element={
+							<>
+								<Home />
+								<Navbar />
+								<Productcards />
+							</>
+						}
+					/>
+					<Route
+						path="/menswear"
+						element={
+							<>
+								<Home /> <Navbar />
+							</>
+						}
+					/>
+					<Route
+						path="/womenswear"
+						element={
+							<>
+								<Home /> <Navbar />
+							</>
+						}
+					/>
+					<Route
+						path="/tops"
+						element={
+							<>
+								<Home /> <Navbar />
+							</>
+						}
+					/>
+					<Route
+						path="/bottoms"
+						element={
+							<>
+								<Home /> <Navbar />
+							</>
+						}
+					/>
+					<Route
+						path="/accessories"
+						element={
+							<>
+								<Home /> <Navbar />
+							</>
+						}
+					/>
+
 				</Routes>
 			</BrowserRouter>
 		</div>
