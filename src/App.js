@@ -1,18 +1,19 @@
+import Adminsignin from "./pages/Adminsignin";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 // import Input from "./components/Input";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
-import Product from "./components/Product";
-import Category from "./components/Category";
-import Adminsignin from "./pages/Adminsignin";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Admin from "./pages/Admin";
 
 
 import Navbar from "./components/Navbar";
 import Productcards from "./components/Productcards";
-
+import Etorders from "./components/Etorders";
+import Etcustomers from "./components/Etcustomers";
+import Etproducts from "./components/Etproducts";
+import Etsuppliers from "./components/Etsuppliers";
 //
 function App() {
 	return (
@@ -22,9 +23,43 @@ function App() {
 					<Route path="/" element={<Login />} />
 					<Route path="/signup" element={<Signup />} />
 					<Route path="/admin-sign-in" element={<Adminsignin />} />
-
-					
-
+					<Route path="/admin" element={<Admin />} />
+					<Route
+						path="/orders-view"
+						element={
+							<>
+								<Admin />
+								<Etorders/>
+							</>
+						}
+					/>
+					<Route
+						path="/customers-view"
+						element={
+							<>
+								<Admin />
+								<Etcustomers/>
+							</>
+						}
+					/>
+					<Route
+						path="/products-view"
+						element={
+							<>
+								<Admin />
+								<Etproducts/>
+							</>
+						}
+					/>
+					<Route
+						path="/suppliers-view"
+						element={
+							<>
+								<Admin />
+								<Etsuppliers/>
+							</>
+						}
+					/>
 					<Route
 						path="/home"
 						element={
@@ -75,7 +110,6 @@ function App() {
 							</>
 						}
 					/>
-
 				</Routes>
 			</BrowserRouter>
 		</div>
