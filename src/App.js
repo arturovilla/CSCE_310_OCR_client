@@ -15,9 +15,12 @@ import Etorders from "./components/Etorders";
 import Etcustomers from "./components/Etcustomers";
 import Etproducts from "./components/Etproducts";
 import Etsuppliers from "./components/Etsuppliers";
+import Etcategory from "./components/Etcategory";
 import Product from "./components/Product";
 import Courier from "./components/Courier";
 import Ordercrud from "./components/Ordercrud";
+import Category from "./components/Category";
+import Supplier from "./components/Supplier";
 //
 function App() {
 	return (
@@ -31,6 +34,8 @@ function App() {
 					<Route path="/product" element={<Product />} />
 					<Route path="/courier" element={<Courier />} />
 					<Route path="/order" element={<Ordercrud />} />
+					<Route path="/category" element={<Category />} />
+					<Route path="/supplier" element={<Supplier />} />
 					<Route
 						path="/orders-view"
 						element={
@@ -64,6 +69,15 @@ function App() {
 							<>
 								<Admin />
 								<Etsuppliers/>
+							</>
+						}
+					/>
+					<Route
+						path="/category-view"
+						element={
+							<>
+								<Admin />
+								<Etcategory/>
 							</>
 						}
 					/>

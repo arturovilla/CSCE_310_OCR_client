@@ -1,5 +1,11 @@
 import React ,{useState,useEffect}from 'react'
 import { DataGrid } from '@mui/x-data-grid';
+import {useNavigate} from "react-router-dom";
+import { Button} from "@material-ui/core";
+import {
+  GridToolbarContainer,
+} from '@mui/x-data-grid-pro';
+import EditIcon from '@mui/icons-material/Edit';
 //
 const columns = [
     {field: 'sid', headerName: 'sid'},
@@ -15,6 +21,19 @@ const columns = [
 function Etsuppliers() {
     const [tabledata,setTableData] = useState([])
     //re-fetches on every page reload
+    const navigate = useNavigate();
+    const handleEdit = () => {
+      navigate('/supplier');
+    };
+    function EditToolbar(props) {
+      return (
+        <GridToolbarContainer>
+          <Button color="primary" startIcon={<EditIcon />} onClick={handleEdit}>
+            Edit
+          </Button>
+        </GridToolbarContainer>
+      );
+    }
     useEffect(() => {
         fetch("http://localhost:3001/SupplierDML")
         .then((data) => data.json())
@@ -30,6 +49,9 @@ function Etsuppliers() {
                     columns={columns}
                     pageSize={10}
                     getRowId ={(tabledata) => tabledata.sid}
+                    components={{
+                        Toolbar: EditToolbar,
+                      }}
                 />
             </div>
         </div>
