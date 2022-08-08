@@ -19,7 +19,7 @@ function Etsuppliers() {
         fetch("http://localhost:3001/SupplierDML")
         .then((data) => data.json())
         .then((data) => setTableData(data))
-    })
+    },[])
     //
     return (
         <div>

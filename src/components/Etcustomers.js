@@ -22,7 +22,7 @@ function Etcustomers() {
         fetch("http://localhost:3001/customer")
         .then((data) => data.json())
         .then((data) => setTableData(data))
-    })
+    },[])
   return (
     <div>
         <h2>Customers</h2>

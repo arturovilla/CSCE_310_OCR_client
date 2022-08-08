@@ -23,7 +23,7 @@ function Etorders() {
     fetch("http://localhost:3001/OrderDML")
       .then((data) => data.json())
       .then((data) => setTableData(data))
-  })
+  },[])
   return (
     <div>
         <h2>Orders</h2>

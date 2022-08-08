@@ -21,7 +21,7 @@ function Etproducts() {
         fetch("http://localhost:3001/ProductDML")
         .then((data) => data.json())
         .then((data) => setTableData(data))
-    })
+    },[])
     return (
         <div>
             <h2>Products</h2>
