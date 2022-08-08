@@ -18,17 +18,16 @@ function Signup() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		var data = JSON.stringify({"email": email, 
+		const res = await axios.post(
+		  `http://localhost:3001/customer`,
+		  {"email": email, 
 		"password": password,
 		"address": address,
 		"name": name,
 		"zip_code": zip_code,
 		"payment_type": payment_type,
 		"phone": phone
-		})
-		const res = await axios.post(
-		  `http://localhost:3001/customer`,
-		  data
+		  }
 		);
 		if (res.data.name === "error") alert("Error when creating Customer"+ ":" + res.data.detail);
 		else {
