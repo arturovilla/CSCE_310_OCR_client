@@ -1,0 +1,23 @@
+.Admin__Header {
+	font-family: druk;
+	font-size: 4rem;
+}
+
+.Adminbar__list {
+	font-family: NMon;
+	font-size: 2rem;
+	text-align: left;
+	/* background-color: aqua; */
+	width: fit-content;
+	margin-left: 1vw;
+}
+
+li a {
+	text-decoration: none !important;
+	color: black;
+}
+
+.Adminbar__Nav {
+	width: fit-content;
+	/* background-color: blue; */
+}
