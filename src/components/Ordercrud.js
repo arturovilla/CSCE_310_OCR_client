@@ -63,7 +63,7 @@ function Ordercrud() {
 				  <Button
 					variant="danger"
 					size="sm"
-					onClick={() => handleDelete(row.cell.row.original.coid)}
+					onClick={() => handleDelete(row.cell.row.original.orderid)}
 				  >
 					Delete
 				  </Button>

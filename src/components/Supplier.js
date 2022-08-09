@@ -9,7 +9,7 @@ function Supplier() {
     sid: "",
     name: "",
     address: "",
-	zipcode: "",
+	zip_code: "",
 	country: "",
     phone: "",
 	website: ""
@@ -18,7 +18,7 @@ function Supplier() {
     updateId: newSupplier.updateId,
     updateName: newSupplier.name,
     updateAddress: newSupplier.address,
-	updateZipcode: newSupplier.zipcode,
+	updatezip_code: newSupplier.zip_code,
 	updateCountry: newSupplier.country,
     updatePhone: newSupplier.phone,
 	updateWebsite: newSupplier.website
@@ -41,7 +41,7 @@ function Supplier() {
       },
 	  {
         Header: "Zip Code",
-        accessor: "zipcode",
+        accessor: "zip_code",
 	  },
       {
         Header: "Country",
@@ -139,7 +139,7 @@ function Supplier() {
         sid: updateSupplier.updateId,
         name: updateSupplier.updateName,
         address: updateSupplier.updateAddress,
-		zipcode: updateSupplier.updateZipcode,
+		zip_code: updateSupplier.updatezip_code,
 		country: updateSupplier.updateCountry,
         phone: updateSupplier.updatePhone,
 		website: updateSupplier.updateWebsite
@@ -165,8 +165,8 @@ function Supplier() {
     setShowModal(false);
   };
 
+  
   const handleDelete = async (id) => {
-    console.log(id);
     const res = await axios.delete(
       `http://localhost:3001/SupplierDML/` +
         id
@@ -209,8 +209,8 @@ function Supplier() {
 
 		<Form.Label>Zip Code</Form.Label>
           <Form.Control
-            name="zipcode"
-            value={newSupplier.zipcode}
+            name="zip_code"
+            value={newSupplier.zip_code}
             onChange={handleChange}
           >
         </Form.Control>
@@ -298,8 +298,8 @@ function Supplier() {
 
 			<Form.Label>Zip Code</Form.Label>
               <Form.Control
-                name="updateZipcode"
-                value={updateSupplier.updateZipcode}
+                name="updatezip_code"
+                value={updateSupplier.updatezip_code}
                 onChange={handleChangeOnUpdating}
               >
             </Form.Control>
