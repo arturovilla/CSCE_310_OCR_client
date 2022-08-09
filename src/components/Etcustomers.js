@@ -1,5 +1,11 @@
 import React ,{useState,useEffect}from 'react'
 import { DataGrid } from '@mui/x-data-grid';
+import {useNavigate} from "react-router-dom";
+import { Button} from "@material-ui/core";
+import {
+  GridToolbarContainer,
+} from '@mui/x-data-grid-pro';
+import EditIcon from '@mui/icons-material/Edit';
 //
 const columns = [
     {field: 'name', headerName: 'name'},
@@ -17,6 +23,19 @@ const columns = [
 
 function Etcustomers() {
     const [tabledata,setTableData] = useState([])
+    const navigate = useNavigate();
+    const handleEdit = () => {
+      navigate('/customer');
+    };
+    function EditToolbar(props) {
+      return (
+        <GridToolbarContainer>
+          <Button color="primary" startIcon={<EditIcon />} onClick={handleEdit}>
+            Edit
+          </Button>
+        </GridToolbarContainer>
+      );
+    }
     //re-fetches on every page reload
     useEffect(() => {
         fetch("http://localhost:3001/customer")
@@ -32,6 +51,9 @@ function Etcustomers() {
                 columns={columns}
                 pageSize={10}
                 getRowId ={(tabledata) => tabledata.cid}
+                components={{
+                    Toolbar: EditToolbar,
+                }}
             />
         </div>
     </div>

@@ -21,6 +21,7 @@ import Courier from "./components/Courier";
 import Ordercrud from "./components/Ordercrud";
 import Category from "./components/Category";
 import Supplier from "./components/Supplier";
+import Customer from "./components/Customer";
 //
 function App() {
 	return (
@@ -34,6 +35,7 @@ function App() {
 					<Route path="/product" element={<Product />} />
 					<Route path="/courier" element={<Courier />} />
 					<Route path="/order" element={<Ordercrud />} />
+					<Route path="/customer" element={<Customer />} />
 					<Route path="/category" element={<Category />} />
 					<Route path="/supplier" element={<Supplier />} />
 					<Route

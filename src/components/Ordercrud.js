@@ -10,8 +10,8 @@ function Ordercrud() {
 	const [Orders, setOrders] = useState([]);
 	const [newOrder, setNewOrder] = useState({
 		orderid: "",
-		deliveryStatus: "",
-		orderDate: "",
+		deliverystatus: "",
+		order_date: "",
 		quantity: "",
 		coid: "",
 		cid: ""
@@ -34,11 +34,11 @@ function Ordercrud() {
 		  },
 		  {
 			Header: "Delivery Status",
-			accessor: "deliveryStatus",
+			accessor: "deliverystatus",
 		  },
 		  {
 			Header: "Order Date",
-			accessor: "orderDate",
+			accessor: "order_date",
 		  },
 		  {
 			Header: "Quantity",
@@ -56,7 +56,7 @@ function Ordercrud() {
 				  <Button
 					variant="info"
 					size="sm"
-					onClick={() => handleOpenModal(row.cell.row.original.coid)}
+					onClick={() => handleOpenModal(row.cell.row.original.orderid)}
 				  >
 					Update
 				  </Button>{" "}
@@ -130,8 +130,8 @@ function Ordercrud() {
 			actualUpdatingId,
 		  {
 			orderid: updateOrder.updateOrderId,
-			deliveryStatus: updateOrder.updateDeliveryStatus,
-			orderDate: updateOrder.updateOrderDate,
+			deliverystatus: updateOrder.updateDeliveryStatus,
+			order_date: updateOrder.updateOrderDate,
 			quantity: updateOrder.updateQuantity,
 			coid: updateOrder.updateCoid,
 			cid: updateOrder.updateCid
@@ -192,8 +192,8 @@ function Ordercrud() {
 			<Form.Group controlId="">
 			  <Form.Label>Delivery Status</Form.Label>
 			  <Form.Control
-				name="deliveryStatus"
-				value={newOrder.deliveryStatus}
+				name="deliverystatus"
+				value={newOrder.deliverystatus}
 				type="text"			
 				onChange={handleChange}
 			  >
@@ -201,8 +201,8 @@ function Ordercrud() {
 	
 			  <Form.Label>Order Date</Form.Label>
 			  <Form.Control
-				name="orderDate"
-				value={newOrder.orderDate}
+				name="order_date"
+				value={newOrder.order_date}
 				type="text"
 				onChange={handleChange}
 			  >

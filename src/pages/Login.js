@@ -72,17 +72,7 @@ function Login() {
 					Sign Up
 				</Button>
 			</div>
-			<div className="Login__Admin">
-				Are you an Admin? Log in
-				<Button
-					variant="text"
-					disableElevation
-					component={Link}
-					to="/admin-sign-in"
-				>
-					here
-				</Button>
-			</div>
+			
 	</div>
 	);
 }
