@@ -1,5 +1,11 @@
 import React ,{useState,useEffect}from 'react'
 import { DataGrid } from '@mui/x-data-grid';
+import {useNavigate} from "react-router-dom";
+import { Button} from "@material-ui/core";
+import {
+  GridToolbarContainer,
+} from '@mui/x-data-grid-pro';
+import EditIcon from '@mui/icons-material/Edit';
 // import EditIcon from '@mui/icons-material/Edit';
 // import DeleteIcon from '@mui/icons-material/Delete';
 //
@@ -19,6 +25,19 @@ function Etorders() {
 
   const [tabledata,setTableData] = useState([])
   //re-fetches on every page reload
+  const navigate = useNavigate();
+    const handleEdit = () => {
+      navigate('/order');
+    };
+    function EditToolbar(props) {
+      return (
+        <GridToolbarContainer>
+          <Button color="primary" startIcon={<EditIcon />} onClick={handleEdit}>
+            Edit
+          </Button>
+        </GridToolbarContainer>
+      );
+    }
   useEffect(() => {
     fetch("http://localhost:3001/OrderDML")
       .then((data) => data.json())
@@ -33,6 +52,9 @@ function Etorders() {
             columns={columns}
             pageSize={10}
             getRowId ={(tabledata) => tabledata.orderid}
+            components={{
+              Toolbar: EditToolbar,
+            }}
           />
         </div>
     </div>

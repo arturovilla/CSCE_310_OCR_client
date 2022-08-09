@@ -9,24 +9,16 @@ import EditIcon from '@mui/icons-material/Edit';
 
 //
 const columns = [
-    {field: 'pid', headerName: 'pid'},
-    {field: 'description', headerName: 'description'},
-    {field: 'cost', headerName: 'cost'},
-    {field: 'color', headerName: 'color'},
     {field: 'catid', headerName: 'catid'},
-    {field: 'sid', headerName: 'sid'},
-    {field: 'name', headerName: 'name'},
-    {field: 'url', headerName: 'url'},
-    {field: 'size', headerName: 'size'},
-    {field: 'quantity', headerName: 'quantity'}
+    {field: 'category_name', headerName: 'category_name'}
 ]
+
 //
-function Etproducts() {
+function Etcategory() {
     const [tabledata,setTableData] = useState([])
-    //re-fetches on every page reload
     const navigate = useNavigate();
     const handleEdit = () => {
-      navigate('/product');
+      navigate('/category');
     };
     function EditToolbar(props) {
       return (
@@ -37,20 +29,23 @@ function Etproducts() {
         </GridToolbarContainer>
       );
     }
+    //re-fetches on every page reload
     useEffect(() => {
-        fetch("http://localhost:3001/ProductDML")
+        fetch("http://localhost:3001/CategoryDML")
         .then((data) => data.json())
         .then((data) => setTableData(data))
+        console.log(tabledata);
     },[])
+    //
     return (
         <div>
-            <h2>Products</h2>
+            <h2>Category</h2>
             <div style={{height: 700, width:"100%"}}>
                 <DataGrid 
                     rows={tabledata}
                     columns={columns}
                     pageSize={10}
-                    getRowId ={(tabledata) => tabledata.pid}
+                    getRowId ={(tabledata) => tabledata.catid}
                     components={{
                         Toolbar: EditToolbar,
                       }}
@@ -60,4 +55,4 @@ function Etproducts() {
     )
 }
 
-export default Etproducts
+export default Etcategory

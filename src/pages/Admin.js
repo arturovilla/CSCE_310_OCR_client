@@ -21,6 +21,9 @@ function Admin() {
                         <li>
                             <Link to="/suppliers-view">Suppliers</Link>
                         </li>
+                        <li>
+                            <Link to="/category-view">Category</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
